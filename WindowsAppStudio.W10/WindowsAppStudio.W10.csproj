@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{C157DE59-490E-4C8A-80FF-B2161B3CB2AE}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsAppStudio</RootNamespace>
+    <AssemblyName>WindowsAppStudio.W10</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <UapDefaultAssetScale>100</UapDefaultAssetScale>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Config\ActionConfig.cs" />
+    <Compile Include="Config\ConfigBase.cs" />
+    <Compile Include="Config\PageConfig.cs" />
+    <Compile Include="Config\SectionConfigBase.cs" />
+    <Compile Include="Config\TouchDevelopConfigBase.cs" />
+    <Compile Include="DesignTime\DesignViewModel.cs" />
+    <Compile Include="Services\TileServices.cs" />
+    <Compile Include="ViewModels\AboutThisAppViewModel.cs" />
+    <Compile Include="ViewModels\ComposedItemViewModel.cs" />
+    <Compile Include="ViewModels\DataViewModelBase.cs" />
+    <Compile Include="ViewModels\DetailViewModel.cs" />
+    <Compile Include="ViewModels\ItemViewModel.cs" />
+    <Compile Include="ViewModels\ListViewModel.cs" />
+    <Compile Include="ViewModels\TouchDevelopViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\PrivacyViewModel.cs" />
+    <Compile Include="MenuExtensions.cs" />
+    <Compile Include="PageBase.cs" />
+    <Compile Include="Layouts\Detail\BaseDetailLayout.cs" />
+    <Compile Include="Layouts\List\ListLayoutBase.cs" />
+    <Compile Include="Navigation\NavigationNode.cs" />
+    <Compile Include="Navigation\NavigationTemplateSelector.cs" />
+    <Compile Include="Navigation\AppNavigation.cs" />
+    <Compile Include="Triggers\IsTypePresentStateTrigger.cs" />
+    <Compile Include="Triggers\PlatformStateTrigger.cs" />
+    <Compile Include="Triggers\OrientationStateTrigger.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="Sections\GenericLayout1Schema.cs" />
+    <Compile Include="Sections\PhotoLayout1Schema.cs" />
+    <Compile Include="Sections\NoPhoto1Schema.cs" />
+    <Compile Include="Sections\PhotoLeft1Schema.cs" />
+    <Compile Include="Sections\PhotoLeftDescription1Schema.cs" />
+    <Compile Include="Sections\BigPictures1Schema.cs" />
+    <Compile Include="Sections\HorizontalCards1Schema.cs" />
+    <Compile Include="Sections\VerticalCards1Schema.cs" />
+    <Compile Include="Sections\BigVerticalCards1Schema.cs" />
+    <Compile Include="Sections\Photo1Schema.cs" />
+    <Compile Include="Sections\BigPhoto1Schema.cs" />
+    <Compile Include="Sections\PhotoTile1Schema.cs" />
+    <Compile Include="Sections\Collection1Schema.cs" />
+    <Compile Include="Sections\AboutConfig.cs" />
+    <Compile Include="Sections\DetailConfig.cs" />
+    <Compile Include="Sections\GenericLayoutConfig.cs" />
+    <Compile Include="Sections\PhotoLayoutConfig.cs" />
+    <Compile Include="Sections\TextLayoutConfig.cs" />
+    <Compile Include="Sections\ListLayoutsConfig.cs" />
+    <Compile Include="Sections\NoPhotoConfig.cs" />
+    <Compile Include="Sections\PhotoLeftConfig.cs" />
+    <Compile Include="Sections\PhotoLeftDescriptionConfig.cs" />
+    <Compile Include="Sections\BigPicturesConfig.cs" />
+    <Compile Include="Sections\HorizontalCardsConfig.cs" />
+    <Compile Include="Sections\VerticalCardsConfig.cs" />
+    <Compile Include="Sections\BigVerticalCardsConfig.cs" />
+    <Compile Include="Sections\PhotoConfig.cs" />
+    <Compile Include="Sections\BigPhotoConfig.cs" />
+    <Compile Include="Sections\PhotoTileConfig.cs" />
+    <Compile Include="Sections\DatasourcesConfig.cs" />
+    <Compile Include="Sections\HtmlConfig.cs" />
+    <Compile Include="Sections\RSSConfig.cs" />
+    <Compile Include="Sections\FlickrConfig.cs" />
+    <Compile Include="Sections\BingConfig.cs" />
+    <Compile Include="Sections\CollectionConfig.cs" />
+    <Compile Include="Sections\TouchDevelopConfig.cs" />
+    <Compile Include="Sections\Actions1Config.cs" />
+    <PRIResource Include="Strings\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Default.rd.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Design\DesignData.json" />
+    <Content Include="Assets\Design\DesignDataHtml.json" />
+    <Content Include="Assets\Design\DesignDataMenu.json" />
+    <Content Include="Assets\Design\DesignDataTD.json" />
+    <Content Include="Assets\Design\DetailDesignData.json" />
+    <Content Include="Assets\Design\DarkGray.png" />
+    <Content Include="Assets\Design\LightGray.png" />
+    <Content Include="Assets\Design\MediumGray.png" />
+    <Content Include="Layouts\List\Breakpoints.Large.ContactCard.json" />
+    <Content Include="Layouts\List\Breakpoints.Large.json" />
+    <Content Include="Layouts\List\Breakpoints.Large.ListBigHorizontalCard.json" />
+    <Content Include="Layouts\List\Breakpoints.Large.ListBigHorizontalCardBox.json" />
+    <Content Include="Layouts\List\Breakpoints.Large.ListTextCard.json" />
+    <Content Include="Layouts\List\Breakpoints.Medium.json" />
+    <Content Include="Layouts\List\Breakpoints.Medium.ListBigVerticalCard.json" />
+    <Content Include="Layouts\List\Breakpoints.Medium.ListBigVerticalCardBox.json" />
+    <Content Include="Layouts\List\Breakpoints.Medium.MenuBig.json" />
+    <Content Include="Layouts\List\Breakpoints.Medium.MenuMedium.json" />
+    <Content Include="Layouts\List\Breakpoints.Medium.MenuSmall.json" />
+    <Content Include="Layouts\List\Breakpoints.Medium.MenuText.json" />
+    <Content Include="Layouts\List\Breakpoints.Medium.Photo.json" />
+    <Content Include="ApplicationInsights.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\DataImages\Tile1.jpg" />
+    <Content Include="Assets\DataImages\Tile2.jpg" />
+    <Content Include="Assets\DataImages\Tile3.jpg" />
+    <Content Include="Assets\DataImages\Tile4.jpg" />
+    <Content Include="Assets\DataImages\Tile5.jpg" />
+    <Content Include="Assets\DataImages\step1.jpg" />
+    <Content Include="Assets\DataImages\step2.jpg" />
+    <Content Include="Assets\DataImages\step3.jpg" />
+    <Content Include="Assets\DataImages\step4.jpg" />
+    <Content Include="Assets\DataImages\ModuleLogo.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-1.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-2.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-3.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-4.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-6.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-7.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-8.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-9.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-10.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-11.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-12.png" />
+    <Content Include="Assets\DataImages\ModuleLogo-13.png" />
+    <Content Include="Assets\DataImages\Content.jpg" />
+    <Content Include="Assets\DataImages\Content-1.jpg" />
+    <Content Include="Assets\DataImages\Content-2.jpg" />
+    <Content Include="Assets\DataImages\Content-3.jpg" />
+    <Content Include="Assets\DataImages\Content-4.jpg" />
+    <Content Include="Assets\DataImages\Content-5.jpg" />
+    <Content Include="Assets\DataImages\Content-6.jpg" />
+    <Content Include="Assets\DataImages\Content-7.jpg" />
+    <Content Include="Assets\DataImages\Content-8.jpg" />
+    <Content Include="Assets\DataImages\Content-9.jpg" />
+    <Content Include="Assets\DataImages\Item-0a141351-cc4f-4231-9b10-099642e342a4.png" />
+    <Content Include="Assets\DataImages\Item-63a8f97f-864e-4433-a452-33c2db30756e.png" />
+    <Content Include="Assets\DataImages\Item-f479b45b-5a73-4ff0-9902-5cbe8f43cae2.png" />
+    <Content Include="Assets\DataImages\Item-31731a8b-97c1-48c0-8aa9-801ec95e7dd0.png" />
+    <Content Include="Assets\DataImages\Item-ee98fe03-6664-4aec-8259-a1c0a06db7fd.png" />
+    <Content Include="Assets\DataImages\Item-c2823056-37a4-490e-a504-3530836ca8e2.png" />
+    <Content Include="Assets\DataImages\Item-480f6a67-18fa-4e18-9a38-16e43ffb60ee.png" />
+    <Content Include="Assets\DataImages\Item-fd93e461-8745-4328-9be0-0d364ca32c38.png" />
+    <Content Include="Assets\DataImages\Item-f66f4887-2e5a-4e15-8716-c24e07533f09.png" />
+    <Content Include="Assets\DataImages\Item-7b1e31ae-92e7-4549-b087-e01b148d4e0f.png" />
+    <Content Include="Assets\DataImages\Item-6a7ad3ef-9dcd-4294-a7b3-a802afd7f0c4.png" />
+    <Content Include="Assets\DataImages\Item-9521e844-1c39-43f0-96fc-6948e0e7d961.png" />
+    <Content Include="Assets\DataImages\Item-4f2119d1-c2df-4dbc-adaa-ba17fd33b64d.png" />
+    <Content Include="Assets\ApplicationLogo.png" />
+    <Content Include="Assets\ApplicationBackgroundImage.jpg" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Data\About.htm">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Data\Detail.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Data\ListLayouts.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Data\PhotoTile.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Data\Datasources.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Data\Html.htm">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Data\Collection.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Data\Actions1.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Data\TouchDevelop.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_wabbit">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_wurtle">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_carrot">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_tinywabbit">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_tinywurtle">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_tinycarrot">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_throughgate">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_throughgate.m4a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_gotshell">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_gotshell.m4a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_healthdown">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_healthdown.m4a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_turtleSquish">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_turtleSquish.m4a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_gong">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_gong.m4a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_enemyentry">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_enemyentry.m4a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_gotcarrot">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_gotcarrot.m4a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_carrotenter">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_carrotenter.m4a">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_title">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\art\l0_instructions">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\precompiled.js">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\index.html">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\default.css">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\browser.js">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\runtime.js">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\error.html">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TouchDevelop\leasc\browsers.html">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Layouts\Controls\DataUpdateInformationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\Controls\DataUpdateInformationControl.xaml.cs">
+      <DependentUpon>DataUpdateInformationControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\Controls\SectionListItemHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\Controls\SectionListItemHeader.xaml.cs">
+      <DependentUpon>SectionListItemHeader.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\Controls\TouchDevelopPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\Controls\TouchDevelopPlayer.xaml.cs">
+      <DependentUpon>TouchDevelopPlayer.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\Detail\MultiColumnDetailLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\Detail\MultiColumnDetailLayout.xaml.cs">
+      <DependentUpon>MultiColumnDetailLayout.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\Detail\PhotoDetailLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\Detail\PhotoDetailLayout.xaml.cs">
+      <DependentUpon>PhotoDetailLayout.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\Detail\TextDetailLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\Detail\TextDetailLayout.xaml.cs">
+      <DependentUpon>TextDetailLayout.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\Detail\YouTubeDetailLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\Detail\YouTubeDetailLayout.xaml.cs">
+      <DependentUpon>YouTubeDetailLayout.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\ListBigHorizontalCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\ListBigHorizontalCard.xaml.cs">
+      <DependentUpon>ListBigHorizontalCard.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\ListBigHorizontalCardBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\ListBigHorizontalCardBox.xaml.cs">
+      <DependentUpon>ListBigHorizontalCardBox.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\ListBigVerticalCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\ListBigVerticalCard.xaml.cs">
+      <DependentUpon>ListBigVerticalCard.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\ListBigVerticalCardBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\ListBigVerticalCardBox.xaml.cs">
+      <DependentUpon>ListBigVerticalCardBox.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\ListContactCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\ListContactCard.xaml.cs">
+      <DependentUpon>ListContactCard.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\ListPhoto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\ListPhoto.xaml.cs">
+      <DependentUpon>ListPhoto.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\ListTextCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\ListTextCard.xaml.cs">
+      <DependentUpon>ListTextCard.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\ListTouchDevelop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\ListTouchDevelop.xaml.cs">
+      <DependentUpon>ListTouchDevelop.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\MenuBig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\MenuBig.xaml.cs">
+      <DependentUpon>MenuBig.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\MenuMedium.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\MenuMedium.xaml.cs">
+      <DependentUpon>MenuMedium.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\MenuSmall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\MenuSmall.xaml.cs">
+      <DependentUpon>MenuSmall.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Layouts\List\MenuText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Layouts\List\MenuText.xaml.cs">
+      <DependentUpon>MenuText.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\AboutPage.xaml.cs">
+      <DependentUpon>AboutPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\AboutListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\AboutListPage.xaml.cs">
+      <DependentUpon>AboutListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\DetailListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\DetailListPage.xaml.cs">
+      <DependentUpon>DetailListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\GenericLayoutListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\GenericLayoutListPage.xaml.cs">
+      <DependentUpon>GenericLayoutListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\GenericLayoutDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\GenericLayoutDetailPage.xaml.cs">
+      <DependentUpon>GenericLayoutDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\PhotoLayoutListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\PhotoLayoutListPage.xaml.cs">
+      <DependentUpon>PhotoLayoutListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\PhotoLayoutDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\PhotoLayoutDetailPage.xaml.cs">
+      <DependentUpon>PhotoLayoutDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\TextLayoutListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\TextLayoutListPage.xaml.cs">
+      <DependentUpon>TextLayoutListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\TextLayoutDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\TextLayoutDetailPage.xaml.cs">
+      <DependentUpon>TextLayoutDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\ListLayoutsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\ListLayoutsListPage.xaml.cs">
+      <DependentUpon>ListLayoutsListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\NoPhotoListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\NoPhotoListPage.xaml.cs">
+      <DependentUpon>NoPhotoListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\PhotoLeftListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\PhotoLeftListPage.xaml.cs">
+      <DependentUpon>PhotoLeftListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\PhotoLeftDescriptionListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\PhotoLeftDescriptionListPage.xaml.cs">
+      <DependentUpon>PhotoLeftDescriptionListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\BigPicturesListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\BigPicturesListPage.xaml.cs">
+      <DependentUpon>BigPicturesListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\HorizontalCardsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\HorizontalCardsListPage.xaml.cs">
+      <DependentUpon>HorizontalCardsListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\VerticalCardsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\VerticalCardsListPage.xaml.cs">
+      <DependentUpon>VerticalCardsListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\BigVerticalCardsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\BigVerticalCardsListPage.xaml.cs">
+      <DependentUpon>BigVerticalCardsListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\PhotoListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\PhotoListPage.xaml.cs">
+      <DependentUpon>PhotoListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\BigPhotoListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\BigPhotoListPage.xaml.cs">
+      <DependentUpon>BigPhotoListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\PhotoTileListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\PhotoTileListPage.xaml.cs">
+      <DependentUpon>PhotoTileListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\DatasourcesListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\DatasourcesListPage.xaml.cs">
+      <DependentUpon>DatasourcesListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\HtmlListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\HtmlListPage.xaml.cs">
+      <DependentUpon>HtmlListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\RSSListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\RSSListPage.xaml.cs">
+      <DependentUpon>RSSListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\RSSDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\RSSDetailPage.xaml.cs">
+      <DependentUpon>RSSDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\FlickrListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\FlickrListPage.xaml.cs">
+      <DependentUpon>FlickrListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\FlickrDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\FlickrDetailPage.xaml.cs">
+      <DependentUpon>FlickrDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\BingListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\BingListPage.xaml.cs">
+      <DependentUpon>BingListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\CollectionListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\CollectionListPage.xaml.cs">
+      <DependentUpon>CollectionListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\CollectionDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\CollectionDetailPage.xaml.cs">
+      <DependentUpon>CollectionDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\TouchDevelopListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\TouchDevelopListPage.xaml.cs">
+      <DependentUpon>TouchDevelopListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\Actions1ListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\Actions1ListPage.xaml.cs">
+      <DependentUpon>Actions1ListPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Shell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Shell.xaml.cs">
+      <DependentUpon>Shell.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Styles\AppBarButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\AppTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\DefaultTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\FontSizes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\AppColors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Application Insights\ConnectedService.json" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="WindowsMobile, Version=10.0.10240.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!--<Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

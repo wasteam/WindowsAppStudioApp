@@ -1,0 +1,72 @@
+[
+  {
+    "MenuType": "Page",
+    "Title": "No Photo",
+    "Icon": "/Assets/DataImages/ModuleLogo-3.png",
+    "Target": "NoPhotoListPage",
+    "_id": "112efcbb-9341-47f6-934d-a99691fb0b5d"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Photo Left",
+    "Icon": "/Assets/DataImages/ModuleLogo-4.png",
+    "Target": "PhotoLeftListPage",
+    "_id": "660a3afc-d0e7-470f-bb13-e4c736ca7ef0"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Photo Left Description",
+    "Icon": "/Assets/DataImages/ModuleLogo-6.png",
+    "Target": "PhotoLeftDescriptionListPage",
+    "_id": "cdb563e8-1c69-41f6-aa42-c783feb8b597"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Big Pictures",
+    "Icon": "/Assets/DataImages/ModuleLogo-7.png",
+    "Target": "BigPicturesListPage",
+    "_id": "1dff3816-63bf-41ee-b324-305049bebbc7"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Horizontal Cards",
+    "Icon": "/Assets/DataImages/ModuleLogo-8.png",
+    "Target": "HorizontalCardsListPage",
+    "_id": "8812787a-7ff3-4a86-8f94-55c2949f5173"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Vertical Cards",
+    "Icon": "/Assets/DataImages/ModuleLogo-9.png",
+    "Target": "VerticalCardsListPage",
+    "_id": "2df07563-515d-4248-9109-e6df4b9dc217"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Big Vertical Cards",
+    "Icon": "/Assets/DataImages/ModuleLogo-10.png",
+    "Target": "BigVerticalCardsListPage",
+    "_id": "383286db-6da4-4daa-9239-f9f11ae9fb06"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Photo",
+    "Icon": "/Assets/DataImages/ModuleLogo-11.png",
+    "Target": "PhotoListPage",
+    "_id": "92108e54-aa60-4f68-872b-b21d81b545ff"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Big Photo",
+    "Icon": "/Assets/DataImages/ModuleLogo-12.png",
+    "Target": "BigPhotoListPage",
+    "_id": "7ac175d1-57cf-4b97-b4f3-9ffae4fdc45c"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Photo Tile",
+    "Icon": "/Assets/DataImages/ModuleLogo-13.png",
+    "Target": "PhotoTileListPage",
+    "_id": "000df5c0-dc82-4235-892a-f62f0d4e113c"
+  }
+]

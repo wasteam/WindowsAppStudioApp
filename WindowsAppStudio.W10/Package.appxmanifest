@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:appstudio="http://schemas.microsoft.com/developer/appx/2015/appstudio" 
+  IgnorableNamespaces="uap mp appstudio">
+
+    <Identity Name="Microsoft.WindowsAppStudioSampleApp" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" Version="1.0.1.0" />
+
+    <mp:PhoneIdentity PhoneProductId="82436223-adc7-4422-b43f-3fed935e5aaf" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+    <Properties>
+        <DisplayName>Windows App Studio Sample App</DisplayName>
+        <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
+        <Logo>Assets\StoreLogo.png</Logo>
+    </Properties>
+
+    <Dependencies>
+        <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.10240.0" MaxVersionTested="10.0.10240.0" />
+    </Dependencies>
+
+    <Resources>
+        <Resource Language="x-generate"/>
+    </Resources>
+
+    <Applications>
+        <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="WindowsAppStudio.App">
+            <uap:VisualElements DisplayName="Windows App Studio"
+              Square150x150Logo="Assets\Square150x150Logo.png"
+              Square44x44Logo="Assets\Square44x44Logo.png"
+              Description="Learn more about Windows App Studio.  Use this template to create an informational app about a topic you care about."
+              BackgroundColor="#333333">
+                <uap:SplashScreen Image="Assets\SplashScreen.png" />
+                <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
+                    <uap:TileUpdate Recurrence="halfHour" UriTemplate="http://ds.winappstudio.com/api/tile/82436223-adc7-4422-b43f-3fed935e5aaf/6db1e7d0-5216-4519-8978-d51f1452f9f2?columnName=Image"/>
+                    <uap:ShowNameOnTiles>
+                        <uap:ShowOn Tile="square150x150Logo"/>
+                    </uap:ShowNameOnTiles>
+                </uap:DefaultTile>
+            </uap:VisualElements>
+        </Application>
+    </Applications>
+
+    <Capabilities>
+        <Capability Name="internetClient" />
+    </Capabilities>
+
+    <appstudio:Metadata>
+        <appstudio:Item Name="appId" Value="82436223-adc7-4422-b43f-3fed935e5aaf" />
+        <appstudio:Item Name="model" Version="1.11" />
+        <appstudio:Item Name="formula" Value="Win10" Version="1.11.0731.1" />
+        <appstudio:Item DataSource="Html" Version="0.1.0"/>
+        <appstudio:Item DataSource="Menu" Version="0.1.0"/>
+        <appstudio:Item DataSource="Collection" Version="0.1.0"/>
+        <appstudio:Item DataSource="Rss" Version="0.1.0"/>
+        <appstudio:Item DataSource="Flickr" Version="0.1.0"/>
+        <appstudio:Item DataSource="Bing" Version="0.1.0"/>
+        <appstudio:Item DataSource="TouchDevelop" Version="0.1.0"/>
+    </appstudio:Metadata>
+</Package>

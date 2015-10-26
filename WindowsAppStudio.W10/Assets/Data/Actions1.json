@@ -1,0 +1,58 @@
+[
+  {
+    "MenuType": "DeepLink",
+    "Title": "Http",
+    "Icon": "/Assets/DataImages/Item-c2823056-37a4-490e-a504-3530836ca8e2.png",
+    "Target": "http://www.microsoft.com",
+    "_id": "dcf7b281-f402-4939-b8c3-be27e6fb6b88"
+  },
+  {
+    "MenuType": "DeepLink",
+    "Title": "Https",
+    "Icon": "/Assets/DataImages/Item-480f6a67-18fa-4e18-9a38-16e43ffb60ee.png",
+    "Target": "https://login.microsoftonline.com",
+    "_id": "e373cc3d-5927-47f6-b822-d89807223171"
+  },
+  {
+    "MenuType": "DeepLink",
+    "Title": "FTP",
+    "Icon": "/Assets/DataImages/Item-fd93e461-8745-4328-9be0-0d364ca32c38.png",
+    "Target": "ftp://ftp.microsoft.com",
+    "_id": "6254ebbe-8bce-41d4-acaf-a17b28a8c10f"
+  },
+  {
+    "MenuType": "DeepLink",
+    "Title": "Email",
+    "Icon": "/Assets/DataImages/Item-f66f4887-2e5a-4e15-8716-c24e07533f09.png",
+    "Target": "mailto:jdoe@site.com",
+    "_id": "838d82e9-b596-4557-a8f3-5ca21e1712f1"
+  },
+  {
+    "MenuType": "DeepLink",
+    "Title": "Phone",
+    "Icon": "/Assets/DataImages/Item-7b1e31ae-92e7-4549-b087-e01b148d4e0f.png",
+    "Target": "tel:123-456-7890",
+    "_id": "a62c75b3-42d0-494c-adea-8ef16cb1822e"
+  },
+  {
+    "MenuType": "DeepLink",
+    "Title": "Here Maps - Address",
+    "Icon": "/Assets/DataImages/Item-6a7ad3ef-9dcd-4294-a7b3-a802afd7f0c4.png",
+    "Target": "bingmaps:?collection=16070+N.E.+36th+Way%2C+Redmond%2C+Wa&lvl=18",
+    "_id": "f593878c-667b-458b-93c6-fb180c7e1fa2"
+  },
+  {
+    "MenuType": "DeepLink",
+    "Title": "Here Maps - Directions",
+    "Icon": "/Assets/DataImages/Item-9521e844-1c39-43f0-96fc-6948e0e7d961.png",
+    "Target": "bingmaps:?rtp=~adr.16070 N.E. 36th Way, Redmond, Wa",
+    "_id": "3888a347-c0de-46ee-9c3c-aaffac21bc17"
+  },
+  {
+    "MenuType": "DeepLink",
+    "Title": "Custom - Zune",
+    "Icon": "/Assets/DataImages/Item-4f2119d1-c2df-4dbc-adaa-ba17fd33b64d.png",
+    "Target": "zune:search?keyword=rss&contenttype=app",
+    "_id": "e8f9c155-b381-4b30-ad13-192380e4c462"
+  }
+]

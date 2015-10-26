@@ -1,0 +1,44 @@
+[
+  {
+    "MenuType": "Page",
+    "Title": "Html",
+    "Icon": "/Assets/DataImages/Item-0a141351-cc4f-4231-9b10-099642e342a4.png",
+    "Target": "HtmlListPage",
+    "_id": "66fff649-c802-4cc4-8e77-270c384a0e10"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "RSS",
+    "Icon": "/Assets/DataImages/Item-63a8f97f-864e-4433-a452-33c2db30756e.png",
+    "Target": "RSSListPage",
+    "_id": "05439507-df9b-4a22-9176-5dca2f667b56"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Flickr",
+    "Icon": "/Assets/DataImages/Item-f479b45b-5a73-4ff0-9902-5cbe8f43cae2.png",
+    "Target": "FlickrListPage",
+    "_id": "fb3acb85-8485-4ca0-a21d-f21fccc47ae6"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Bing",
+    "Icon": "/Assets/DataImages/Item-31731a8b-97c1-48c0-8aa9-801ec95e7dd0.png",
+    "Target": "BingListPage",
+    "_id": "49635d0e-c065-4458-95ee-45b94628a3ac"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "Collection",
+    "Icon": "/Assets/DataImages/Item-ee98fe03-6664-4aec-8259-a1c0a06db7fd.png",
+    "Target": "CollectionListPage",
+    "_id": "1798e153-892c-4198-85cd-c3111c89d917"
+  },
+  {
+    "MenuType": "Page",
+    "Title": "TouchDevelop",
+    "Icon": "/Assets/DataImages/ModuleLogo-13.png",
+    "Target": "TouchDevelopListPage",
+    "_id": "d0543ad4-2704-494d-9a3b-ee1c04b65f16"
+  }
+]
